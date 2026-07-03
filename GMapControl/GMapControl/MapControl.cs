@@ -210,8 +210,28 @@ namespace GMapControl
 
             gMapControl1.ReloadMap();
         }
+        public void RemoveMarker(string stationId)
+        {
+            GMapMarker markerToRemove = null;
 
-        
+            foreach (GMapMarker marker in markerOverlay.Markers)
+            {
+                StationInfo info = marker.Tag as StationInfo;
+
+                if (info != null && info.StationId == stationId)
+                {
+                    markerToRemove = marker;
+                    break;
+                }
+            }
+
+            if (markerToRemove != null)
+            {
+                markerOverlay.Markers.Remove(markerToRemove);
+                gMapControl1.Refresh();
+            }
+        }
+
 
         //----------------------------------------------------
         // Clear search graphics (LabVIEW calls this)
