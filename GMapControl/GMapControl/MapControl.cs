@@ -11,8 +11,42 @@ namespace GMapControl
     {
         private double clickedLat;
         private double clickedLng;
+        public enum MapAction
+        {
+            None = 0,
+
+            SearchNearby = 1,
+
+            StationInfo = 2,
+
+            RefreshStation = 3,
+
+            RemoveStation = 4
+        }
+        private MapAction lastAction = MapAction.None;
+
+        private double searchRadiusMeters = 5000;
 
         private readonly GMapOverlay markerOverlay = new GMapOverlay("Markers");
+        private readonly GMapOverlay searchOverlay = new GMapOverlay("Search");
+        // Context menu
+        private ContextMenuStrip mapMenu = new ContextMenuStrip();
+        private ToolStripMenuItem searchNearbyItem =
+            new ToolStripMenuItem("Search nearby stations");
+
+        // Marker menu
+        private ContextMenuStrip markerMenu = new ContextMenuStrip();
+
+        private ToolStripMenuItem infoItem =
+            new ToolStripMenuItem("Station information");
+
+        private ToolStripMenuItem refreshItem =
+            new ToolStripMenuItem("Refresh station");
+
+        private ToolStripMenuItem removeItem =
+            new ToolStripMenuItem("Remove station");
+
+        private GMapMarker selectedMarker = null;
 
         public MapControl()
         {
@@ -32,10 +66,22 @@ namespace GMapControl
 
             gMapControl1.DragButton = MouseButtons.Left;
 
+            gMapControl1.Overlays.Add(searchOverlay);
             gMapControl1.Overlays.Add(markerOverlay);
-
+            gMapControl1.MouseUp += GMapControl1_MouseUp;
             gMapControl1.MouseDown += GMapControl1_MouseDown;
+
             gMapControl1.OnMarkerClick += GMapControl1_OnMarkerClick;
+            searchNearbyItem.Click += SearchNearbyItem_Click;
+            mapMenu.Items.Add(searchNearbyItem);
+            // Marker context menu
+            infoItem.Click += InfoItem_Click;
+            refreshItem.Click += RefreshItem_Click;
+            removeItem.Click += RemoveItem_Click;
+
+            markerMenu.Items.Add(infoItem);
+            markerMenu.Items.Add(refreshItem);
+            markerMenu.Items.Add(removeItem);
         }
 
         //----------------------------------------------------
@@ -43,16 +89,36 @@ namespace GMapControl
         //----------------------------------------------------
         private void GMapControl1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button != MouseButtons.Left)
-                return;
-
             PointLatLng point = gMapControl1.FromLocalToLatLng(e.X, e.Y);
 
             clickedLat = point.Lat;
             clickedLng = point.Lng;
+        }
+        private void GMapControl1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                mapMenu.Show(gMapControl1, e.Location);
+            }
+        }
+        private void SearchNearbyItem_Click(object sender, EventArgs e)
+        {
+            lastAction = MapAction.SearchNearby;
+        }
 
-            // No marker is added here.
-            // LabVIEW will read the coordinates and decide what to display.
+        private void InfoItem_Click(object sender, EventArgs e)
+        {
+            lastAction = MapAction.StationInfo;
+        }
+
+        private void RefreshItem_Click(object sender, EventArgs e)
+        {
+            lastAction = MapAction.RefreshStation;
+        }
+
+        private void RemoveItem_Click(object sender, EventArgs e)
+        {
+            lastAction = MapAction.RemoveStation;
         }
 
         //----------------------------------------------------
@@ -60,11 +126,12 @@ namespace GMapControl
         //----------------------------------------------------
         private void GMapControl1_OnMarkerClick(GMapMarker marker, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
-            {
-                markerOverlay.Markers.Remove(marker);
-                gMapControl1.Refresh();
-            }
+            if (e.Button != MouseButtons.Right)
+                return;
+
+            selectedMarker = marker;
+
+            markerMenu.Show(gMapControl1, e.Location);
         }
 
         //----------------------------------------------------
@@ -78,6 +145,21 @@ namespace GMapControl
         public double GetLongitude()
         {
             return clickedLng;
+        }
+        public int GetLastAction()
+        {
+            int action = (int)lastAction;
+            lastAction = MapAction.None;
+            return action;
+        }
+        public string GetSelectedStationId()
+        {
+            if (selectedMarker == null)
+                return "";
+
+            StationInfo info = (StationInfo)selectedMarker.Tag;
+
+            return info.StationId;
         }
 
         //----------------------------------------------------
@@ -121,10 +203,61 @@ namespace GMapControl
             gMapControl1.ReloadMap();
         }
 
+        
+
+        //----------------------------------------------------
+        // Clear search graphics (LabVIEW calls this)
+        //----------------------------------------------------
+        public void ClearSearchArea()
+        {
+            searchOverlay.Markers.Clear();
+            searchOverlay.Polygons.Clear();
+
+            gMapControl1.Refresh();
+        }
+        //----------------------------------------------------
+        // Draw Search Area
+        //----------------------------------------------------
+        public void DrawSearchArea(double radiusMeters)
+        {
+            // Store the radius
+            searchRadiusMeters = radiusMeters;
+
+            // Remove previous search graphics
+            searchOverlay.Markers.Clear();
+            searchOverlay.Polygons.Clear();
+
+            // Search center
+            PointLatLng center = new PointLatLng(clickedLat, clickedLng);
+
+            // Draw center marker
+            GMarkerGoogle centerMarker =
+                new GMarkerGoogle(center, GMarkerGoogleType.blue_dot);
+
+            searchOverlay.Markers.Add(centerMarker);
+
+            // Draw search circle
+            GMapPolygon circle =
+                new GMapPolygon(
+                    GeoCircle.CreateCircle(center, searchRadiusMeters),
+                    "SearchArea");
+
+            circle.Stroke = new System.Drawing.Pen(
+                System.Drawing.Color.Blue, 2);
+
+            circle.Fill =
+                new System.Drawing.SolidBrush(
+                    System.Drawing.Color.FromArgb(40, System.Drawing.Color.Blue));
+
+            searchOverlay.Polygons.Add(circle);
+
+            gMapControl1.Refresh();
+        }
         //----------------------------------------------------
         // Add Air Quality Marker
         //----------------------------------------------------
         public void AddAirQualityMarker(
+            string stationId,
             double lat,
             double lon,
             string stationName,
@@ -143,13 +276,16 @@ namespace GMapControl
 
             marker.ToolTipText = stationName;
 
-            marker.Tag =
-                $"Station: {stationName}\n\n" +
-                $"PM2.5 : {pm25} µg/m³\n" +
-                $"PM10  : {pm10} µg/m³\n" +
-                $"NO₂   : {no2} µg/m³\n" +
-                $"O₃    : {o3} µg/m³\n\n" +
-                $"Updated:\n{lastUpdate}";
+            marker.Tag = new StationInfo
+            {
+                StationId = stationId,
+                StationName = stationName,
+                PM25 = pm25,
+                PM10 = pm10,
+                NO2 = no2,
+                O3 = o3,
+                LastUpdate = lastUpdate
+            };
 
             markerOverlay.Markers.Add(marker);
 
@@ -164,5 +300,6 @@ namespace GMapControl
             markerOverlay.Markers.Clear();
             gMapControl1.Refresh();
         }
+
     }
 }

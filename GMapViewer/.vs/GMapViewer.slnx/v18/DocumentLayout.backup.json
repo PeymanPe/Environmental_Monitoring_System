@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\",
+  "WorkspaceRootPath": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|d:\\autonomous systems\\oulu\\measurment systems\\examples\\gmap.net\\gmapviewer\\gmapviewer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|d:\\autonomous systems\\oulu\\measurment systems\\environmentalmonitoringsystem\\gmapviewer\\gmapviewer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|solutionrelative:gmapviewer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\gmapviewer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|d:\\autonomous systems\\oulu\\measurment systems\\environmentalmonitoringsystem\\gmapviewer\\gmapviewer\\geocircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|solutionrelative:gmapviewer\\geocircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\gmapviewer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|solutionrelative:gmapviewer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\gmapviewer\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\gmapviewer\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6A608F3-54C9-45FA-A1A9-CE33856E7BF6}|GMapViewer\\GMapViewer.csproj|solutionrelative:gmapviewer\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,43 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GeoCircle.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\GeoCircle.cs",
+              "RelativeDocumentMoniker": "GMapViewer\\GeoCircle.cs",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\GeoCircle.cs",
+              "RelativeToolTip": "GMapViewer\\GeoCircle.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T19:34:39.09Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\GMapViewer\\Form1.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\Form1.cs",
               "RelativeDocumentMoniker": "GMapViewer\\Form1.cs",
-              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\GMapViewer\\Form1.cs",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\Form1.cs",
               "RelativeToolTip": "GMapViewer\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-28T21:22:51.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\GMapViewer\\Properties\\AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "GMapViewer\\Properties\\AssemblyInfo.cs",
-              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\GMapViewer\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\Properties\\AssemblyInfo.cs",
               "RelativeToolTip": "GMapViewer\\Properties\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T21:22:03.627Z"
+              "WhenOpened": "2026-06-28T21:22:03.627Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\GMapViewer\\Form1.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\Form1.cs",
               "RelativeDocumentMoniker": "GMapViewer\\Form1.cs",
-              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapViewer\\GMapViewer\\Form1.cs [Design]",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapViewer\\GMapViewer\\Form1.cs [Design]",
               "RelativeToolTip": "GMapViewer\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T21:08:05.22Z"
+              "WhenOpened": "2026-06-28T21:08:05.22Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

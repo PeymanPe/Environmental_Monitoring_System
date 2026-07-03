@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapControl\\",
+  "WorkspaceRootPath": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|d:\\autonomous systems\\oulu\\measurment systems\\examples\\gmap.net\\gmapcontrol\\gmapcontrol\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|d:\\autonomous systems\\oulu\\measurment systems\\environmentalmonitoringsystem\\gmapcontrol\\gmapcontrol\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|solutionrelative:gmapcontrol\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapControl\\gmapcontrol\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\gmapcontrol\\geocircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|solutionrelative:gmapcontrol\\geocircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|d:\\autonomous systems\\oulu\\measurment systems\\environmentalmonitoringsystem\\gmapcontrol\\gmapcontrol\\stationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|solutionrelative:gmapcontrol\\stationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\gmapcontrol\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|solutionrelative:gmapcontrol\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,28 +26,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StationInfo.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\StationInfo.cs",
+              "RelativeDocumentMoniker": "GMapControl\\StationInfo.cs",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\StationInfo.cs",
+              "RelativeToolTip": "GMapControl\\StationInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:04:23.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GeoCircle.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\GeoCircle.cs",
+              "RelativeDocumentMoniker": "GMapControl\\GeoCircle.cs",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\GeoCircle.cs",
+              "RelativeToolTip": "GMapControl\\GeoCircle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T19:55:46.03Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MapControl.cs",
-              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapControl\\GMapControl\\MapControl.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\MapControl.cs",
               "RelativeDocumentMoniker": "GMapControl\\MapControl.cs",
-              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapControl\\GMapControl\\MapControl.cs",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\MapControl.cs",
               "RelativeToolTip": "GMapControl\\MapControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAIwJkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-28T22:25:02.513Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MapControl.cs [Design]",
-              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapControl\\GMapControl\\MapControl.cs",
+              "DocumentMoniker": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\MapControl.cs",
               "RelativeDocumentMoniker": "GMapControl\\MapControl.cs",
-              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\Examples\\GMap.NET\\GMapControl\\GMapControl\\MapControl.cs [Design]",
+              "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\MapControl.cs [Design]",
               "RelativeToolTip": "GMapControl\\MapControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-28T22:19:03.851Z"
