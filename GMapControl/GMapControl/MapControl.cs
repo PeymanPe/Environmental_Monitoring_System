@@ -26,6 +26,7 @@ namespace GMapControl
         private MapAction lastAction = MapAction.None;
 
         private double searchRadiusMeters = 5000;
+        private bool markerWasClicked = false;
 
         private readonly GMapOverlay markerOverlay = new GMapOverlay("Markers");
         private readonly GMapOverlay searchOverlay = new GMapOverlay("Search");
@@ -98,6 +99,12 @@ namespace GMapControl
         {
             if (e.Button == MouseButtons.Right)
             {
+                if (markerWasClicked)
+                {
+                    markerWasClicked = false;
+                    return;
+                }
+
                 mapMenu.Show(gMapControl1, e.Location);
             }
         }
@@ -129,6 +136,7 @@ namespace GMapControl
             if (e.Button != MouseButtons.Right)
                 return;
 
+            markerWasClicked = true;
             selectedMarker = marker;
 
             markerMenu.Show(gMapControl1, e.Location);

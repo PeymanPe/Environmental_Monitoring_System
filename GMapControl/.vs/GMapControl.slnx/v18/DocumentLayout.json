@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|solutionrelative:gmapcontrol\\geocircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|d:\\autonomous systems\\oulu\\measurment systems\\environmentalmonitoringsystem\\gmapcontrol\\gmapcontrol\\stationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\gmapcontrol\\stationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63063174-691A-48F9-BCA2-584221298E0E}|GMapControl\\GMapControl.csproj|solutionrelative:gmapcontrol\\stationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,8 +38,7 @@
               "RelativeToolTip": "GMapControl\\StationInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T16:04:23.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-03T16:04:23.06Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "GMapControl\\GeoCircle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T19:55:46.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-02T19:55:46.03Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "GMapControl\\MapControl.cs",
               "ToolTip": "D:\\Autonomous Systems\\Oulu\\Measurment Systems\\EnvironmentalMonitoringSystem\\GMapControl\\GMapControl\\MapControl.cs",
               "RelativeToolTip": "GMapControl\\MapControl.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAAwNwAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAcwGsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-28T22:25:02.513Z",
               "EditorCaption": ""
