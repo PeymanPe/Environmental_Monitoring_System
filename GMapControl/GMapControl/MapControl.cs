@@ -165,7 +165,10 @@ namespace GMapControl
             if (selectedMarker == null)
                 return "";
 
-            StationInfo info = (StationInfo)selectedMarker.Tag;
+            StationInfo info = selectedMarker.Tag as StationInfo;
+
+            if (info == null)
+                return "";
 
             return info.StationId;
         }
