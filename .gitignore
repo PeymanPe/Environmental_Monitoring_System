@@ -1,0 +1,23 @@
+# Visual Studio
+**/.vs/
+
+# Build output
+**/bin/
+**/obj/
+
+# NuGet packages
+**/packages/
+
+# User files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# LabVIEW
+*.aliases
+*.lvlps
