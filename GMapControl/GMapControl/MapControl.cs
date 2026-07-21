@@ -305,7 +305,13 @@ namespace GMapControl
 
             marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
-            marker.ToolTipText = stationName;
+            marker.ToolTipText =
+                $"Station: {stationName}\n" +
+                $"PM2.5: {pm25:F2} µg/m³\n" +
+                $"PM10: {pm10:F2} µg/m³\n" +
+                $"NO₂: {no2:F2} µg/m³\n" +
+                $"O₃: {o3:F2} µg/m³\n" +
+                $"Updated: {lastUpdate}";
 
             marker.Tag = new StationInfo
             {
