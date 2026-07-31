@@ -35,15 +35,15 @@ The application currently supports:
 
 ## Map View
 
-<img src="images/map.png" width="900">
+<img src="docs/images/map.png" width="900">
 
 ## Station Information
 
-<img src="images/station.png" width="900">
+<img src="docs/images/station.png" width="900">
 
 ## Historical Graph
 
-<img src="images/graph.png" width="900">
+<img src="docs/images/graph.png" width="900">
 
 ---
 
