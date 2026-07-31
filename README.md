@@ -1,4 +1,4 @@
-# Environmental Monitoring System
+# Environmental Air Quality Monitoring and Visualization System
 
 An environmental monitoring application developed in LabVIEW with a custom C# GMap.NET control for visualizing real-time air quality data from the OpenAQ API.
 
